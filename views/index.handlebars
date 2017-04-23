@@ -1,0 +1,61 @@
+<div class="container">
+
+    <!-- Header of the webpage -->
+    <div class="row title">
+        <h1 class="text-center">Eat Da Burger</h1>
+    </div>
+
+    <!--Burger list-->
+    <div class="row">
+        <div class="col-md-3 col-md-offset-2">
+            <h4>Burger'</h4>
+            <div>
+                <table>
+                    {{#each burgers}} {{#unless this.devoured}}
+                    <tr>
+                        <td>{{this.id}}</td>  
+                        <td>{{this.burger_name}}</td>
+                        <td>
+                            <form action="/{{this.id}}?_method=PUT" method="POST">
+                                <input type="hidden" name="devour" value="true">
+                                <button type="submit">Devour it!</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {{/unless}} {{/each}}
+                </table>
+            </div>
+        </div>
+        <div class="col-md-2 hidden-xs">
+            <img class="burger-img" src="/assets/img/burger stack.jpg" width="150px">
+        </div>
+        <div class="col-md-3">
+            <h4>Burgers Devoured</h4>
+            <div>
+                <table>
+                    {{#each burgers}} {{#if this.devoured}}
+                    <tr>
+                        <td>{{this.id}}</td>  
+                        <td>{{this.burger_name}}</td>
+                    </tr>
+                    {{/if}} {{/each}}
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!--Add new burger-->
+    <div class="row text-center">
+        <h3>Add a Burger</h3>
+        <form class="create-update-form" action="/" method="POST">
+            <div class="form-group">
+                <input type="text" id="burger-name" name="name">
+            </div>
+            <button type="submit">Add burger</button>
+        </form>
+    </div>
+
+    <footer class="row text-center">
+        <p>Copyright &copy; 2017 Radhika Sivarajan</p>
+    </footer>
+</div>
