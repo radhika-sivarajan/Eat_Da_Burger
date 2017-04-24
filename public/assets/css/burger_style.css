@@ -10,18 +10,30 @@ body {
 
 .title h1 {
     font-family: "cherry", sans-serif;
-    font-size: 100px;
+    font-size: 500%;
     color: #daa520;
     text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.3), 1px 1px 0px rgba(0, 0, 0, 0.8);
+}
+
+.add-burger {
+    margin-top: 50px;
 }
 
 .burger-img {
     width: 150px;
 }
 
+hr.divider {
+    height: 6px;
+    background: url(../img/hr-img.png) repeat-x 0 0;
+    border: 0;
+}
+
 tr td:nth-child(1),
 tr td:nth-child(2) {
     font-family: 'Krona One', sans-serif;
+    color: #dff0d8;
+    text-shadow: rgb(3, 3, 3) 0px 0px 7px;
 }
 
 .burger-list h4 {
@@ -29,8 +41,4 @@ tr td:nth-child(2) {
     font-size: 25px;
     text-align: center;
     text-shadow: 0 1px 1px #ffffff, 0 2px 0 #999, 0 3px 0 #555, 0 7px 5px #333;
-}
-
-.add-burger {
-    margin-top: 60px;
 }

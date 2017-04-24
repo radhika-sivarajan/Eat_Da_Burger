@@ -1,11 +1,12 @@
 <div class="container">
-    <div class="row title">
+
+    <div class="row title text-center">
         <!-- Header of the webpage -->
         <div class="col-lg-8">
-            <h1 class="text-center">Eat Da Burger</h1>
+             <h1>Eat Da Burger</h1>
         </div>
-        <!--Add new burger-->
-        <div class="col-lg-4 text-center add-burger">
+         <!--Add new burger-->
+        <div class="col-lg-4 add-burger">           
             <form class="form-inline create-form" action="/" method="POST">
                 <div class="form-group">
                     <input type="text" class="form-control" id="burger-name" name="burgerName" placeholder="Burger name">
@@ -14,6 +15,7 @@
             </form>
         </div>
     </div>
+    <hr class="divider">
 
     <!--Burger list-->
     <div class="row burger-list">
@@ -48,7 +50,7 @@
                     {{#each burgers}} 
                         {{#if this.devoured}}
                             <tr>
-                                <td>{{this.id}}</td>  
+                                <td>{{this.id}}.</td>  
                                 <td>{{this.burger_name}}</td>
                             </tr>
                         {{/if}}
