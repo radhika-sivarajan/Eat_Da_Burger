@@ -18,7 +18,7 @@ router.get("/", function(req, res) {
 router.put("/:id", function(req, res) {
     var condition = "id = " + req.params.id;
 
-    burger.update({ devoured: true }, condition, function() {
+    burger.update({ devoured: req.body.devoured }, condition, function() {
         res.redirect("/");
     });
 });
