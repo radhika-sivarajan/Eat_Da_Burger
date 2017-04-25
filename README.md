@@ -28,5 +28,4 @@ Then run below address on browser.
 ## Screenshots
 
 Home page
-
-![home-page](/screenshots/home-page.png?raw=true)
+![home-page](/screenshots/eat-da-burger-home.png?raw=true)

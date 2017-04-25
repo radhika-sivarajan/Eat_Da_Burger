@@ -28,6 +28,7 @@ tr td:nth-child(2) {
     font-family: 'Krona One', sans-serif;
     color: #dff0d8;
     text-shadow: rgb(3, 3, 3) 0px 0px 7px;
+    text-transform: capitalize;
 }
 
 .burger-list {
