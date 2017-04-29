@@ -1,6 +1,7 @@
 // MYSQL connection set up, create and exporting
 var mysql = require("mysql");
 
+// Localhost connection
 // var connection = mysql.createConnection({
 //     port: 3306,
 //     host: "localhost",
@@ -9,13 +10,15 @@ var mysql = require("mysql");
 //     database: "burgers_db"
 // });
 
-var connection = {
+// Heroku connection
+var connection = mysql.createConnection({
+    port: 3306,
     host: 'us-cdbr-iron-east-03.cleardb.net',
     user: 'b9ecb81df6a0a5',
     password: '0abf8695',
     database: 'heroku_d34adf4f865feb9',
     connectionLimit: 5
-}
+});
 
 connection.connect(function(err) {
     if (err) {
