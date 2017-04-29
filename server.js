@@ -5,7 +5,7 @@ var methodOverride = require("method-override");
 var exphbs = require("express-handlebars");
 var routes = require("./controllers/burgers_controller.js");
 
-var port = 3000;
+var PORT = process.env.PORT || 3000;
 var app = express();
 
 // Serve static content for the app from the "public" 
@@ -17,4 +17,4 @@ app.use(methodOverride("_method"));
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 app.use("/", routes);
-app.listen(port);
+app.listen(PORT);
