@@ -19,7 +19,7 @@ var connection = mysql.createPool({
     connectionLimit: 5
 });
 
-connection.connect(function(err) {
+connection.getConnection(function(err) {
     if (err) {
         console.error("error connecting: " + err.stack);
         return;
