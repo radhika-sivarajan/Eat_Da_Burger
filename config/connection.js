@@ -12,7 +12,6 @@ var mysql = require("mysql");
 
 // Heroku connection
 var connection = mysql.createConnection({
-    port: 3306,
     host: 'us-cdbr-iron-east-03.cleardb.net',
     user: 'b9ecb81df6a0a5',
     password: '0abf8695',
